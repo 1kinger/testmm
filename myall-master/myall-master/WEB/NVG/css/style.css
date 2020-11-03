@@ -1,0 +1,107 @@
+.containerX {opacity:1;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-image: url('../img/MYALLbacground.png');
+  background-size: cover;
+  background-position: center center;
+  top:0px;left:0px;}
+
+.menu {
+  width: 100%;
+  height: auto;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  max-width: 792px;
+  max-height: 100%; }
+  @media screen and (min-width: 512px) {
+    .menu {
+      max-width: 65vw;
+      max-height: 65vh; } }
+
+.main-menu {
+  cursor: pointer; }
+  .main-menu circle {
+    transition: opacity 250ms; }
+
+ 
+
+[class$="-button"] {
+  cursor: pointer; }
+  [class$="-button"] circle {
+    opacity: 0;
+    transition: opacity 250ms; }
+    [class$="-button"] circle:hover {
+      opacity: 0.6; }
+  [class$="-button"] path {
+    pointer-events: none; }
+	
+	
+	
+	
+	
+	
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
